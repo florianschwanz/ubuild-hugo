@@ -15,10 +15,10 @@
     <meta name="author" content="{{ .Site.Author.name }}"/>
     <link href='{{ "" | absLangURL }}/favicon.ico' rel='icon' type='image/x-icon'/>
 
-    <meta property="og:url" content="{{ .URL | absLangURL }}" />
+    <meta property="og:url" content="{{ .Permalink | absLangURL }}" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <link rel="canonical" href="{{ .URL | absLangURL }}" />
+    <link rel="canonical" href="{{ .Permalink | absLangURL }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/forestryio/ubuild-blocks@1.0.0/dist/css/ubuild.css"/>
     {{ partial "head_custom.html" . }}
 </head> 
