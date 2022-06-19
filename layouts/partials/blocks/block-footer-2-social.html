@@ -1,0 +1,25 @@
+<section class="block block-footer-2">
+    <div class="container">
+        <div class="columns">
+            {{ range .Section.social }}
+            <div class="column">
+                <a href="{{ .link_url }}">
+                    {{ if (eq .link_type "github") }}
+                    <img class="social-icon" src="/uploads/2022/06/01/github.svg">
+                    {{ end }}
+                    {{ if (eq .link_type "linkedin") }}
+                    <img class="social-icon" src="/uploads/2022/06/01/linkedin.svg">
+                    {{ end }}
+                    {{ if (eq .link_type "email") }}
+                    <img class="social-icon" src="/uploads/2022/06/01/email-outline.svg">
+                    {{ end }}
+                    {{ safeHTML .link_text }}
+                </a>
+            </div>
+            {{ end }}
+            <div class="column">
+                from Berlin with ♥
+            </div>
+        </div>
+    </div>
+</section>
