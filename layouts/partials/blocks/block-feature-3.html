@@ -1,14 +1,11 @@
-{{ if (and .Section.media_alignment (eq .Section.media_alignment "Left")) }}
-{{ partial "blocks/block-feature-2" }}
-{{ else }}
-<section class="block block-feature-1">
+<section class="block block-feature-3">
     <div class="container">
-        <div class="columns">
-            <div class="column text">
-                <nav class="block-feature-1--nav">
+        <div class="columns rel">
+            <div class="column text-overlay">
+                <nav class="block-feature-3--nav">
                     <ul>
                         <li class="nav-item">Topics</li>
-                        <li class="nav-item">—</li>
+                        <li class="nav-item-separator">—</li>
 
                         {{ range .Section.navigation }}
                         <li class="nav-item nav-item-numbered {{ if (eq $.Page.Permalink .link_url) }}active{{ end }}">
@@ -22,10 +19,11 @@
                 <h2><span class="light">{{ safeHTML .Section.headline }}</span></h2>
                 <p>{{ safeHTML .Section.content }}</p>
             </div>
+            <div class="column text">
+            </div>
             <div class="column media">
                 <img src="{{ .Section.media.image | relURL }}" alt="{{ .Section.media.alt_text }}">
             </div>
         </div>
     </div>
 </section>
-{{ end }}
